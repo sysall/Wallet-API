@@ -1,0 +1,1443 @@
+{
+	"info": {
+		"_postman_id": "39c1480b-ed12-4540-bcbe-b7eb594d6bc0",
+		"name": "Account_Abstraction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6178949"
+	},
+	"item": [
+		{
+			"name": "User_Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Test@1234\",\r\n    \"salt\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User_register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"sangavi@nextazy.com\",\r\n    \"password\":\"Test@1234\",\r\n    \"confirmPassword\":\"Test@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmM1NjQ2OTliNzJmNzRlZjU2MGQ0OWEiLCJpYXQiOjE3MjQyMTIzMjksImV4cCI6MTcyNjgwNDMyOX0.xMZiaW805RqffbBeY4D08HbOPMMMTmqUhp3ztTIaIGU; Max-Age=86400; Path=/; Expires=Thu, 22 Aug 2024 03:52:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "203"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cb-LPiLWcU7jfk33DplWllz9ajksY0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 03:52:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"data\": {\n        \"email\": \"sangavi@nextazy.com\",\n        \"isVerified\": true,\n        \"notes\": \"LOGGED_IN\",\n        \"status\": true,\n        \"Action\": true,\n        \"ip_address\": \"::1\"\n    },\n    \"message\": \"Registration Successful and Logged in\"\n}"
+				},
+				{
+					"name": "User_Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Testw@1234\",\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b2-37HJJj5mkEWwy1+rRIPrsq3MYzE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 03:55:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Wallet created successfully.\",\n    \"data\": {\n        \"ip_address\": \"::1\",\n        \"notes\": \"LOGGED_IN\",\n        \"smartAddress\": \"0xf95ddd2b324fdcd84511be101d83a31d9841c2ed\"\n    }\n}"
+				},
+				{
+					"name": "Salt_error_handle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Testw@1234\",\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e-ksNHeG9FRQMyu/sa45chRV6cmQs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 16:21:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"Salt does not match\"\n}"
+				},
+				{
+					"name": "Password_error_Handle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Testw@1234\",\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-Lutj7JOqbwyqeEh//9TI+H9nlBE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 16:24:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 401,\n    \"success\": false,\n    \"message\": \"Invalid Password\"\n}"
+				},
+				{
+					"name": "Email_validation_Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"xyz@gmail.com\",\r\n    \"password\":\"est@1234\",\r\n    \"confirmPassword\":\"est@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-wb246J9pw7pWjaoovfHCWsYH5no\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 16:27:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"Please Provide a Valid Email Address\"\n}"
+				},
+				{
+					"name": "Password_Mismatch_error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"xyzf@gmail.com\",\r\n    \"password\":\"esat@\",\r\n    \"confirmPassword\":\"est@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-b9OPzROL/V9hJZV9TvUCKLAU+q8\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 16:28:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"Passwords do not match\"\n}"
+				},
+				{
+					"name": "Password_Count_check",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"email\":\"xyzf@gmail.com\",\r\n    \"password\":\"Test@123\",\r\n    \"confirmPassword\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9c-J5IhIY7ybPSfa8GUTa3qlQ/wc84\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 21 Aug 2024 16:32:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"Password Invalid format. At least 1 capital letter, 1 lowercase letter, 1 special character, 1 numeric character.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get_Balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//0xa6f2b5d93b9e60314be998d398e15b93610398c8",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/get_balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"get_balance"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get_Balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4321/user/get_balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"get_balance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "447"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1bf-qMrTBC9xwo/6CP8N1/+VgvYmMLI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Aug 2024 11:50:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \" Balance Details Fetched. \",\n    \"data\": [\n        {\n            \"asset\": \"TNT\",\n            \"contractAddress\": \"0x1640EC98AAe58FF396f158eCe64334b4c9A4b977\",\n            \"type\": \"ERC-20\",\n            \"network\": \"MATIC\",\n            \"balance\": 0,\n            \"worth\": 0\n        },\n        {\n            \"asset\": \"MATIC\",\n            \"contractAddress\": \"\",\n            \"type\": \"COIN\",\n            \"network\": \"MATIC\",\n            \"balance\": 0.01,\n            \"worth\": 0.01\n        },\n        {\n            \"asset\": \"LINK\",\n            \"contractAddress\": \"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\",\n            \"type\": \"ERC-20\",\n            \"network\": \"MATIC\",\n            \"balance\": 2,\n            \"worth\": 2\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"amount\" :\"0.0000001\",\r\n    \"token_contract_address\":\"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"send"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Send",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"amount\" :\"0.0000001\",\r\n    \"token_contract_address\":\"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"send"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"194-JBZ88VJq6KlsYjTr6LkXADosWBs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 14 Aug 2024 12:43:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Transaction Successfull. \",\n    \"data\": {\n        \"from\": \"0xc6dec33cbdc87b5bb3df10c5d47e2f12f4a29d0c\",\n        \"to\": \"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\n        \"amount\": \"0.0000001\",\n        \"trasactionHash\": \"0x2e04b027a9fe6c58d65c14f0452ccfe0fb380fef71879cc1877cf40caed75350\",\n        \"_id\": \"66bca67f176540e3c7da7868\",\n        \"createdAt\": \"2024-08-14T12:43:43.563Z\",\n        \"updatedAt\": \"2024-08-14T12:43:43.563Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create_Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/create_Wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"create_Wallet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create_Account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/create_Wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"create_Wallet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "454"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c6-JhDHS7GnBkf3cWF4PU1m0qVI1kI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Aug 2024 04:57:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \" Wallet created Successfully. \",\n    \"data\": {\n        \"_id\": \"66b9d8226dad45330ee57def\",\n        \"walletAddress\": \"0x6e40152effd2a2fc9da1fe41f2b3465b06773dfc\",\n        \"role\": \"USER\",\n        \"isVerified\": true,\n        \"isApproved\": false,\n        \"Action\": true,\n        \"status\": true,\n        \"notes\": \"LOGGED_IN\",\n        \"ipList\": [],\n        \"invested_users\": false,\n        \"createdAt\": \"2024-08-12T09:38:42.879Z\",\n        \"updatedAt\": \"2024-08-12T16:12:35.674Z\",\n        \"__v\": 0,\n        \"smartWallet\": \"0x36dd6d398a0eeffabdf741c8ef0b3ef5d75da429\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "import_Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"asset\": \"LINK\",\r\n    \"contractAddress\": \"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\",\r\n    \"name\": \"Polygon\",\r\n    \"type\": \"ERC-20\",\r\n    \"network\": \"MATIC\",\r\n    \"decimals\": 18\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/import_Token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"import_Token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "import_Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"asset\": \"LINK\",\r\n    \"contractAddress\": \"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\",\r\n    \"name\": \"Polygon\",\r\n    \"type\": \"ERC-20\",\r\n    \"network\": \"MATIC\",\r\n    \"decimals\": 18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/import_Token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"import_Token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"152-she3h8p8mWS02Jsv/qe3kSnTXSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Aug 2024 09:09:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Token Imported Successfully. \",\n    \"data\": {\n        \"asset\": \"LINK\",\n        \"walletAddress\": \"0xad30045ab928cb79f8dc4677a568f57ea06ad9cb\",\n        \"contractAddress\": \"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\",\n        \"_id\": \"66bb22c568550c780881bcca\",\n        \"createdAt\": \"2024-08-13T09:09:25.580Z\",\n        \"updatedAt\": \"2024-08-13T09:09:25.580Z\",\n        \"__v\": 0\n    }\n}"
+				},
+				{
+					"name": "import_Token_Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"asset\": \"LINK\",\r\n    \"contractAddress\": \"0x0Fd9e8d3aF1aaee056EB9e802c3A762a667b1904\",\r\n    \"name\": \"Polygon\",\r\n    \"type\": \"ERC-20\",\r\n    \"network\": \"MATIC\",\r\n    \"decimals\": 18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/import_Token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"import_Token"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-2W4SAXr18xqidbjpbe37Atc3v5Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Aug 2024 09:23:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"success\": false,\n    \"message\": \"Token already imported.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deposite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4320/user/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4320",
+					"path": [
+						"user",
+						"deposit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deposite",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4320/user/deposite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4320",
+							"path": [
+								"user",
+								"deposite"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85-jIqUWJwrVceTbXWq8XCO24R5AFI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Aug 2024 08:33:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Address fetched. \",\n    \"data\": {\n        \"status\": 200,\n        \"data\": \"0xc6dEC33CBDc87b5bB3DF10C5D47e2F12F4A29d0c\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Send_matic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"amount\" :\"0.00000001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4320/user/send_Matic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4320",
+					"path": [
+						"user",
+						"send_Matic"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"amount\" :\"0.0000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4320/user/send_Matic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4320",
+							"path": [
+								"user",
+								"send_Matic"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"194-6eIepX0ANGayelvKpIlvdW2PsxU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Aug 2024 09:01:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Transaction Successfull. \",\n    \"data\": {\n        \"from\": \"0xc6dec33cbdc87b5bb3df10c5d47e2f12f4a29d0c\",\n        \"to\": \"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\n        \"amount\": \"0.0000001\",\n        \"trasactionHash\": \"0x61f3faa4414ae3c5f9cbd444d24ef5fca60a7829c2eb876328f18d1ec847c3a1\",\n        \"_id\": \"66bf155381ba0a2e8e8241e5\",\n        \"createdAt\": \"2024-08-16T09:01:07.837Z\",\n        \"updatedAt\": \"2024-08-16T09:01:07.837Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "wallet_recovery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4320/user/wallet_recovery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4320",
+					"path": [
+						"user",
+						"wallet_recovery"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "wallet_recovery",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"salt\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4320/user/wallet_recovery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4320",
+							"path": [
+								"user",
+								"wallet_recovery"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"85-0uiI6FPwkAa3VMVY7MoL8G9HLkE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Aug 2024 04:38:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Address fetched. \",\n    \"data\": {\n        \"status\": 200,\n        \"data\": \"0x78B0FeCA60B049f9ae70615F61697c8f290FF631\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:4321/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Testw@1234\",\r\n    \"salt\":\"123w\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendNFT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"tokenId\" :18,\r\n    \"token_contract_address\":\"0x11c141dE3A0A250d67575C6Dd26e279Aefa7Ea8c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4321/user/sendNFT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4321",
+					"path": [
+						"user",
+						"sendNFT"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SendNFT",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"toAddress\":\"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\r\n    \"tokenId\" :18,\r\n    \"token_contract_address\":\"0x11c141dE3A0A250d67575C6Dd26e279Aefa7Ea8c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4321/user/sendNFT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4321",
+							"path": [
+								"user",
+								"sendNFT"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "383"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17f-meurDNv0f6Ja3XIl7vBarpXUQqE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Aug 2024 17:09:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"success\": true,\n    \"message\": \"Transaction Successfull. \",\n    \"data\": {\n        \"from\": \"0xa6f2b5d93b9e60314be998d398e15b93610398c8\",\n        \"to\": \"0x6e40152EFFd2A2FC9da1Fe41F2b3465b06773dfC\",\n        \"trasactionHash\": \"0x202e3215d4232da4a35e6a46891793feff38ed138dce151fc2a1db763b337a91\",\n        \"_id\": \"66c770b9b5ce374b23b4d7c6\",\n        \"createdAt\": \"2024-08-22T17:09:13.477Z\",\n        \"updatedAt\": \"2024-08-22T17:09:13.477Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}

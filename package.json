@@ -1,0 +1,29 @@
+{
+  "name": "account_abstraction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ethereumjs/tx": "^5.4.0",
+    "axios": "^1.7.4",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.5",
+    "ethereumjs-tx": "^2.1.2",
+    "express": "^4.19.2",
+    "express-ip": "^1.0.4",
+    "express-useragent": "^1.0.15",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.1",
+    "nodemon": "^3.1.4",
+    "web3": "^1.10.4"
+  }
+}

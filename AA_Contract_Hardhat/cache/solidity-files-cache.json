@@ -1,0 +1,109 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/sysall/Downloads/Account_Abstraction 2/AAcontract-HardHat/contracts/EntryPoint.sol": {
+      "lastModificationDate": 1725871500992,
+      "contentHash": "4f0242c6ec9f40768ae56ba9a921937f",
+      "sourceName": "contracts/EntryPoint.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.12"
+      ],
+      "artifacts": [
+        "EntryPoint",
+        "ICreate2Deployer",
+        "IPaymaster",
+        "IWallet",
+        "StakeManager",
+        "UserOperationLib"
+      ]
+    },
+    "/Users/sysall/Downloads/Account_Abstraction 2/AAcontract-HardHat/contracts/SimpleAccountFactory.sol": {
+      "lastModificationDate": 1725871500990,
+      "contentHash": "2c6c659cd8843c4181e89386d872f7c1",
+      "sourceName": "contracts/SimpleAccountFactory.sol",
+      "solcConfig": {
+        "version": "0.8.21",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.12"
+      ],
+      "artifacts": [
+        "Address",
+        "BaseAccount",
+        "Create2",
+        "ECDSA",
+        "ERC1967Proxy",
+        "ERC1967Utils",
+        "Errors",
+        "IAccount",
+        "IAggregator",
+        "IBeacon",
+        "IERC1155Receiver",
+        "IERC165",
+        "IERC1822Proxiable",
+        "IERC1967",
+        "IERC721Receiver",
+        "IERC777Recipient",
+        "IEntryPoint",
+        "INonceManager",
+        "IStakeManager",
+        "Initializable",
+        "Proxy",
+        "ReentrancyGuardUpgradeable",
+        "SimpleAccount",
+        "SimpleAccountFactory",
+        "StorageSlot",
+        "TokenCallbackHandler",
+        "UUPSUpgradeable",
+        "UserOperationLib"
+      ]
+    }
+  }
+}

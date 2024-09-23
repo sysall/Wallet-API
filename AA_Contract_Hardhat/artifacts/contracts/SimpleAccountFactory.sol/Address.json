@@ -1,0 +1,22 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Address",
+  "sourceName": "contracts/SimpleAccountFactory.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "AddressEmptyCode",
+      "type": "error"
+    }
+  ],
+  "bytecode": "0x60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122045d062296a90fa4fdde08a967ab527b3e7c3cafc4c1eaee6e9630874f7eb7df664736f6c63430008150033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122045d062296a90fa4fdde08a967ab527b3e7c3cafc4c1eaee6e9630874f7eb7df664736f6c63430008150033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
